@@ -283,6 +283,72 @@ export default function IntermediatePage() {
                 </Card>
               </ScrollAnimated>
             ))}
+            
+            {/* Trading Simulator Card */}
+            <ScrollAnimated direction="up" className="delay-400">
+              <Card className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 h-full flex flex-col">
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <Badge className="bg-green-500/20 text-green-400">
+                      Trading
+                    </Badge>
+                    <div className="flex space-x-2">
+                      <BarChart3 className="h-4 w-4 text-green-400" />
+                      <Target className="h-4 w-4 text-blue-400" />
+                      <TrendingUp className="h-4 w-4 text-purple-400" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl text-slate-100 mb-2">
+                    Trading Simulator
+                  </CardTitle>
+                  <CardDescription className="text-slate-400">
+                    Practice trading with virtual money and real market data from Alpha Vantage
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <div className="space-y-4 flex-1">
+                    <div>
+                      <h4 className="text-sm font-medium text-slate-300 mb-2">Features:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        <Badge variant="outline" className="text-xs border-slate-600 text-slate-400">
+                          Real-time Data
+                        </Badge>
+                        <Badge variant="outline" className="text-xs border-slate-600 text-slate-400">
+                          Portfolio Tracking
+                        </Badge>
+                        <Badge variant="outline" className="text-xs border-slate-600 text-slate-400">
+                          Virtual Trading
+                        </Badge>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Real Market Data</span>
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Portfolio Management</span>
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Transaction History</span>
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-4">
+                    <Link href="/trading-simulator">
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                        <BarChart3 className="mr-2 h-4 w-4" />
+                        Start Trading
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimated>
           </div>
         </div>
       </section>

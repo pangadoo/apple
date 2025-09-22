@@ -14,9 +14,9 @@ interface BackgroundLinesProps {
 export function BackgroundLines({ 
   children, 
   className,
-  lineColor = "rgba(59, 130, 246, 0.3)",
-  lineOpacity = 0.3,
-  lineCount = 5
+  lineColor = "rgba(216, 222, 233, 0.3)",
+  lineOpacity = 0.5,
+  lineCount = 12
 }: BackgroundLinesProps) {
   return (
     <div className={cn("relative min-h-screen", className)}>
@@ -40,7 +40,7 @@ export function BackgroundLines({
         {Array.from({ length: 3 }).map((_, i) => (
           <div
             key={`vertical-${i}`}
-            className="absolute h-full w-px opacity-20"
+            className="absolute h-full w-px opacity-10"
             style={{
               background: `linear-gradient(180deg, transparent, ${lineColor}, transparent)`,
               left: `${(i + 1) * (100 / 4)}%`,
